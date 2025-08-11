@@ -1,0 +1,8 @@
+if SHIELD_carreon
+
+config ZMK_carreon
+    default "CARREON"
+
+endif
+
+
