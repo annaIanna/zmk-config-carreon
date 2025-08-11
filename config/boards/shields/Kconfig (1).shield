@@ -1,8 +1,14 @@
-if SHIELD_carreon
+# Enable your shield and set Bluetooth name
+if SHIELD_CARREON  # Must match -DSHIELD=carreon in build command
 
-config ZMK_carreon
-    default "CARREON"
+config ZMK_KEYBOARD_NAME
+    default "carreon"  # Bluetooth display name
+
+# Optional but recommended for nice!nano v2:
+config ZMK_BLE
+    default y
+
+config ZMK_USB
+    default y
 
 endif
-
-

@@ -20,28 +20,15 @@
     };
 
     // Keyboard scan configuration (GPIO pins for rows/columns)
-    kscan0: kscan {
+     kscan0: kscan {
         compatible = "zmk,kscan-gpio-matrix";
-        diode-direction = "col2row";  // "row2col" if using row-to-column diodes
-
-        // Column GPIO pins (adjust to match your PCB)
-        col-gpios
-            = <&gpio0 4 GPIO_ACTIVE_HIGH>   
-            , <&gpio0 5 GPIO_ACTIVE_HIGH>   
-            , <&gpio0 21 GPIO_ACTIVE_HIGH>
-            , <&gpio0 20 GPIO_ACTIVE_HIGH>
-            , <&gpio0 19 GPIO_ACTIVE_HIGH>
-            , <&gpio0 18 GPIO_ACTIVE_HIGH>
-            , <&gpio0 6 GPIO_ACTIVE_HIGH>                          // Add all columns
-            ;
-
-        // Row GPIO pins (adjust to match your PCB)
+        wakeup-source;
+        diode-direction = "col2row";
         row-gpios
-            = <&gpio0 3 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>  
-            , <&gpio0 2 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>  
-            , <&gpio0 0 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>
-            , <&gpio0 1 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>                                              // Add all rows
+            = <&pro_micro 3 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)> // Row A from the schematic file
+            , <&pro_micro 2 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)> // Row B from the schematic file
+            , <&pro_micro 0 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)> // Row C from the schematic file
+            , <&pro_micro 1 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)> // Row D from the schematic file
             ;
-    };
-
+     }
 };
