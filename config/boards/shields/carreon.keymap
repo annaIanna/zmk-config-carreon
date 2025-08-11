@@ -25,10 +25,10 @@
 
         MAIN_layer {
             bindings = <
-                                   &kp DOT   &kp N0   &kp DEL   
-                       &kp EQUAL   &kp N1    &kp N2   &kp N3   &kp ENTER     
-            &kp PLUS   &kp MINUS   &kp N4    &kp N5   &kp N6   &kp LPAR   &kp C_VOL_UP
-            &kp FSLSH   &kp STAR    &kp N7   &kp N8   &kp N9   &kp RPAR   &kp C_VOL_DN
+            &trans     &trans      &kp DOT   &kp N0   &kp DEL   &trans     &trans   
+            &trans     &kp EQUAL   &kp N1    &kp N2   &kp N3    &kp ENTER  &trans  
+            &kp PLUS   &kp MINUS   &kp N4    &kp N5   &kp N6    &kp LPAR   &kp C_VOL_UP
+            &kp FSLSH  &kp STAR    &kp N7   &kp N8    &kp N9    &kp RPAR   &kp C_VOL_DN
             >;
         };
     };
