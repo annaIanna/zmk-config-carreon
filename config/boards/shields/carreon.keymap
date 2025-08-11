@@ -9,9 +9,8 @@
 #include <dt-bindings/zmk/bt.h>
 
 #define MAIN 0
-#define SYM 1
-#define NAV 2
-#define BT 3
+
+
 
 &mt {
     flavor = "tap-preferred";
